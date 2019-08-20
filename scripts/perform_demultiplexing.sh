@@ -25,10 +25,10 @@ echo -e "\t- Local input  directory: ${lInDir}"
 echo -e "\t- Local output directory: ${lOpDir}"
 mkdir -p ${rOpDir} ${lOpDir}
 
-# # Copy the data from the remote directory to the local input directory
-# echo -e "\n- Copying the data from the remote directory to the local input directory..."
-# echo -r "- rsync -arvP ${rInDir}/* ${lInDir}"
-# rsync -arvP ${rInDir}/* ${lInDir}
+# Copy the data from the remote directory to the local input directory
+echo -e "\n- Copying the data from the remote directory to the local input directory..."
+echo -r "- rsync -arvP ${rInDir}/* ${lInDir}"
+rsync -arvP ${rInDir}/* ${lInDir}
 
 # Run the demultiplxing
 echo -e "\n- Running demultiplexing using bcl2fastq"
