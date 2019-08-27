@@ -40,6 +40,10 @@ echo -e "\n- Copying the data back to the remote output directory from the local
 echo -e "- rsync -arvP ${lOpDir}/* ${rOpDir}"
 rsync -arvP ${lOpDir}/* ${rOpDir}
 
-# # Cleanup
-# echo "- Cleaning up the local folders"
-# # rm -rf ${lInDir} ${lOpDir}
+# Cleanup
+echo "- Cleaning up the local folders"
+echo -e "\t- Please run the following command after inspection..."
+echo -e "\t  rm -rf ${lInDir} ${lOpDir}"
+# rm -rf ${lInDir} ${lOpDir}
+
+# /usr/local/bin/bcl2fastq -R /home/rad/users/gaurav/projects/misc/input/190808_NB501802_0188_AHKMYFBGXB -p 12 --output-dir /home/rad/users/gaurav/projects/misc/output/AGRad_ATACseq_MUC001 --no-lane-splitting --use-bases-mask Y76,I6n,nnnnnnnn
